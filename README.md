@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/CatacombGL-AppImage)](https://github.com/pkgforge-dev/CatacombGL-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/Link4Electronics/CatacombGL-AppImage/blob/main/AppDir/CatacombGL.png" width="128" />
+  <img src="https://github.com/Link4Electronics/CatacombGL-AppImage" width="128" />
 </p>
 
 
