@@ -30,7 +30,7 @@ if [ "${DEVEL_RELEASE-}" = 1 ]; then
 else
 	echo "Making stable build of CatacombGL..."
 	VERSION="$(git ls-remote --tags --sort="v:refname" "$REPO" | tail -n1 | sed 's/.*\///; s/\^{}//; s/^v//')"
-	git clone --branch v"$VERSION" --single-branch --recursive --depth 1 "$REPO" ./CatacombGL
+	git clone --branch v"$VERSION" --single-branch "$REPO" ./CatacombGL
 fi
 echo "$VERSION" > ~/version
 
