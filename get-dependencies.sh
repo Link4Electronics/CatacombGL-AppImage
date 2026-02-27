@@ -29,9 +29,10 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./CatacombGL
-cmake . -DCMAKE_BUILD_TYPE=Release
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j$(nproc)
-mv -v CatacombGL ./AppDir/bin
+mv -v CatacombGL ../../AppDir/bin
 # else
 # 	regular build steps
 # fi
