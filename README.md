@@ -7,13 +7,13 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/CatacombGL-AppImage)](https://github.com/pkgforge-dev/CatacombGL-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/Link4Electronics/CatacombGL-AppImage/blob/main/AppDir/CatacombGL.png" width="128" />
+  <img src="https://github.com/pkgforge-dev/CatacombGL-AppImage/blob/main/AppDir/CatacombGL.png" width="128" />
 </p>
 
 
-| Latest Stable Release | Upstream URL |
-| :---: | :---: |
-| [Click here](https://github.com/pkgforge-dev/CatacombGL-AppImage/releases/latest) | [Click here](https://github.com/ArnoAnsems/CatacombGL) |
+| Latest Stable Release | Latest Nightly Relase | Upstream URL |
+| :---: | :---: | :---: |
+| [Click here](https://github.com/pkgforge-dev/CatacombGL-AppImage/releases/latest) | [Click here](https://github.com/pkgforge-dev/CatacombGL-AppImage/releases/tag/nightly) | [Click here](https://github.com/ArnoAnsems/CatacombGL) |
 
 </div>
 
