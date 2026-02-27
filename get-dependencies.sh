@@ -19,12 +19,19 @@ get-debloated-pkgs --add-common --prefer-nano
 #make-aur-package PACKAGENAME
 
 # If the application needs to be manually built that has to be done down here
-# if [ "${DEVEL_RELEASE-}" = 1 ]; then
-echo "Making nightly build of CatacombGL..."
+echo "Building CatacombGL..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/ArnoAnsems/CatacombGL"
-VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone "$REPO" ./CatacombGL
+if [ "${DEVEL_RELEASE-}" = 1 ]; then
+    echo "Making nightly build of CatacombGL..."
+    echo "---------------------------------------------------------------"
+    VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
+    git clone "$REPO" ./CatacombGL
+else
+echo "Making stable build of CatacombGL..."
+	VERSION="$(git ls-remote --tags --sort="v:refname" "$REPO" | tail -n1 | sed 's/.*\///; s/\^{}//; s/^v//')"
+	git clone --branch v"$VERSION" --single-branch --recursive --depth 1 "$REPO" ./CatacombGL
+fi
 echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
@@ -33,6 +40,3 @@ mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j$(nproc)
 mv -v CatacombGL ../../AppDir/bin
-# else
-# 	regular build steps
-# fi
